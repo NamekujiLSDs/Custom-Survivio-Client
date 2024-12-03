@@ -1,9 +1,9 @@
 {
   "name": "custom-survivio-client",
-  "version": "1.0.0",
+  "productName": "Custom Survev.io Client",
+  "version": "0.0.1",
   "description": "Unofficial client for surviv.io",
   "main": "index.js",
-  "icon": "./icon.ico",
   "scripts": {
     "test": "electron .",
     "build": "electron-builder --win --x64 --publish never",

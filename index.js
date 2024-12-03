@@ -12,11 +12,11 @@ let gameWindow
 let appVersion = app.getVersion()
 
 //アプデスキップ
-Object.defineProperty(app, 'isPackaged', {
-    get() {
-        return true;
-    }
-});
+// Object.defineProperty(app, 'isPackaged', {
+//     get() {
+//         return true;
+//     }
+// });
 
 //カスタムプロトコルの登録
 app.on('ready', () => {
@@ -118,7 +118,7 @@ let mainWindow = () => {
         }
     })
     Menu.setApplicationMenu(null)
-    gameWindow.webContents.loadURL("https://google.com/")
+    gameWindow.webContents.loadURL("https://survev.io/")
     gameWindow.webContents.on('did-finish-load', () => {
         splashWindow.destroy()
         gameWindow.show()
