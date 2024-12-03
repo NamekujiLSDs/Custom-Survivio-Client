@@ -1,0 +1,31 @@
+{
+  "name": "custom-survivio-client",
+  "version": "1.0.0",
+  "description": "Unofficial client for surviv.io",
+  "main": "index.js",
+  "icon": "./icon.ico",
+  "scripts": {
+    "test": "electron .",
+    "build": "electron-builder --win --x64 --publish never",
+    "publish": "electron-builder --win --x64 --publish always"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NamekujiLSDs/Custom-Survivio-Client.git"
+  },
+  "author": "NamekujiLSDs",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/NamekujiLSDs/Custom-Survivio-Client/issues"
+  },
+  "homepage": "https://github.com/NamekujiLSDs/Custom-Survivio-Client#readme",
+  "devDependencies": {
+    "electron": "^10.4.7",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "electron-localshortcut": "^3.2.1",
+    "electron-store": "^8.2.0",
+    "electron-updater": "^6.3.9"
+  }
+}
