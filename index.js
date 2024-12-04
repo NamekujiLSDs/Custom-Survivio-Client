@@ -11,12 +11,12 @@ let gameWindow
 
 let appVersion = app.getVersion()
 
-//アプデスキップ
-// Object.defineProperty(app, 'isPackaged', {
-//     get() {
-//         return true;
-//     }
-// });
+// アプデスキップ
+Object.defineProperty(app, 'isPackaged', {
+    get() {
+        return true;
+    }
+});
 
 //カスタムプロトコルの登録
 app.on('ready', () => {
@@ -130,8 +130,16 @@ let mainWindow = () => {
             console.log(`サイドボタンでのナビゲーションをキャンセルしました: ${input.code}`);
         }
     });
+    shortcut.register(gameWindow, "F5", () => {
+        gameWindow.webContents.send("reload")
+    })
+    shortcut.register(gameWindow, "F11", () => {
+        gameWindow.setFullScreen(!gameWindow.isFullScreen)
+    })
+    shortcut.register(gameWindow, "F12", () => {
+        gameWindow.webContents.isDevToolsOpened() ? gameWindow.webContents.closeDevTools() : gameWindow.webContents.openDevTools();
+    })
 }
-
 app.on('ready', () => {
     start(appVersion)
 })
